@@ -26,6 +26,10 @@ async fn main() {
     //     "https://api.adoptium.net/v3/binary/latest/17/ga/{}/{}/jre/hotspot/normal/eclipse",
     //     os, arch
     // );
+    // if the file doesn't exist, download it
+    if dir.join("cs346_frontend.jar").exists() {
+        println!("cs346_frontend.jar exists");
+    }
     download_file(
         "https://github.com/CheatCod/test/raw/main/cs346_frontend.jar",
         &dir,
